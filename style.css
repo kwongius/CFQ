@@ -1,0 +1,41 @@
+
+
+body .container {
+    padding:32px;
+    background-color: #DDDDDD;
+}
+
+body {
+    background-color: #DDDDDD;
+}
+
+.quoteInputContainer {
+    padding-bottom: 32px;
+}
+
+.card {
+    padding:10px;
+    margin:32px 16px;
+    background-color:#FFF;
+    border-radius:2px 2px 0px 0px;
+    -moz=border-radius:2px 2px 0px 0px;
+    -webkit=border-radius:2px 2px 0px 0px;
+}
+
+.quote {
+    padding:8px;
+    font-size:3em;
+}
+
+.date {
+    float:left;
+}
+
+.author {
+    float:right;
+}
+
+.loadMore {
+    text-align:center;
+}
+
