@@ -66,6 +66,21 @@ switch ($_SERVER['REQUEST_METHOD']) {
         exit("Quote required");
     }
 
+    // Remove quotes if necessary
+    $quoteCount = substr_count($quote, "\"");
+    $firstChar = substr($quote, 0, 1);
+    $lastChar = substr($quote, -1);
+    if ($quoteCount == 2 && $firstChar === "\"" && $lastChar == "\"")
+    {
+        $quote = trim($quote, "\"");
+    }
+
+    if (empty($quote))
+    {
+        exit("Quote required");
+    }
+
+
     $quoteId = $database->insert("quotes", [
         "quote" => $quote,
         "attribution" => !empty($postData["attribution"]) ? $postData["attribution"] : null
